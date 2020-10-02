@@ -25,13 +25,22 @@ namespace OOP2Tutorial_1
             {
                 int choice = 0;
                 int ordersProcessed = 0; // Keeping track of processed orders
+                bool validChoice;
                 do
                 {
-                    Console.WriteLine("1. Add a new order.");
+                    Console.WriteLine("\n1. Add a new order.");
                     Console.WriteLine("2. Display status for all orders.");
                     Console.WriteLine("3. Process all un-processed orders.");
                     Console.WriteLine("4. Exit the program.");
-                } while (!(int.TryParse(Console.ReadLine(), out choice) && choice < 5 && choice > 0));
+                    if(!(int.TryParse(Console.ReadLine(), out choice) && choice < 5 && choice > 0))
+                    {
+                        Console.WriteLine("Invalid choice, try again!");
+                        validChoice = false;
+                    } else
+                    {
+                        validChoice = true;
+                    }
+                } while (!validChoice);
 
                 switch (choice)
                 {
