@@ -52,7 +52,7 @@ namespace OOP2Tutorial_1
                         Console.WriteLine("Printing status for all orders...");
                         foreach (Order order in orderList)
                         {
-                            Console.WriteLine(order.OrderedProduct.Name + ": " + order.State);
+                            Console.WriteLine("Product: " order.OrderedProduct.Name + " Status: " + order.State);
                         }
 
                         break;
